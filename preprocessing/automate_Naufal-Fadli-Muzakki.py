@@ -43,11 +43,11 @@ def preprocess_data(df, target_column, save_path, file_path):
     X_train, X_test, Y_train, Y_test = train_test_split(x, y, stratify=y, test_size=0.2, random_state=42)
 
     # Simpan data preprocessed
-    os.makedirs("preprocessing/dataset", exist_ok=True)
-    X_train.to_csv("preprocessing/dataset/X_train.csv", index=False)
-    X_test.to_csv("preprocessing/dataset/X_test.csv", index=False)
-    Y_train.to_csv("preprocessing/dataset/Y_train.csv", index=False)
-    Y_test.to_csv("preprocessing/dataset/Y_test.csv", index=False)
+    os.makedirs("preprocessing/dataset_preprocessing", exist_ok=True)
+    X_train.to_csv("preprocessing/dataset_preprocessing/X_train.csv", index=False)
+    X_test.to_csv("preprocessing/dataset_preprocessing/X_test.csv", index=False)
+    Y_train.to_csv("preprocessing/dataset_preprocessing/Y_train.csv", index=False)
+    Y_test.to_csv("preprocessing/dataset_preprocessing/Y_test.csv", index=False)
 
     return X_train, X_test, Y_train, Y_test
 
